@@ -1,1 +1,1 @@
-# aws project website
+# AWS project website
