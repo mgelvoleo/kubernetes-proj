@@ -1,7 +1,8 @@
-- hosts: kubernetes
+- hosts: all
   become: true
   tasks: 
-    - name: create new deployment
-      command: kubectl apply -f /home/ansible/cloud-cv-pipeline/Deployment.yml --server=https://192.168.49.2:8443
-    - name: create new service
-      command: kubectl apply -f /home/ansible/cloud-cv-pipeline/Service.yml --server=https://192.168.49.2:8443
+    
+     - name: create new deployment
+       command: kubectl apply -f /home/ansible/cloud-cv-pipeline/Deployment.yml
+     - name: create new service
+       command: kubectl apply -f /home/ansible/cloud-cv-pipeline/Service.yml
