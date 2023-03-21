@@ -6,7 +6,7 @@ spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrdevops
+     app: mgelvoleo
    template:
       metadata:
         labels:
@@ -14,7 +14,7 @@ spec:
       spec:
        containers:
         - name: mgelvoleo
-          image: mgelvoleo/aws-pipeline
+          image: mgelvoleo/cloud-cv-pipeline
           imagePullPolicy: Always
           ports:
           - containerPort: 80
