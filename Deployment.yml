@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mgelvoleo
+  name: mgelvoleo
 spec:
-   replicas: 2
-   selector:      # tells the controller which pods to watch/belong to
+  replicas: 2
+  selector:      
     matchLabels:
-     app: mgelvoleo
-   template:
-      metadata:
-        labels:
-          app: mgelvoleo
-      spec:
-       containers:
-        - name: mgelvoleo
-          image: mgelvoleo/cloud-cv-pipeline
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 80
+      app: mgelvoleo
+  template:
+    metadata:
+      labels:
+        app: mgelvoleo
+    spec:
+      containers:
+      - name: mgelvoleo
+        image: mgelvoleo/cloud-cv-pipeline
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
